@@ -1,0 +1,99 @@
+html, body {
+	width:100%;
+	height:100%;
+
+	margin:0;
+	padding:0;
+
+	overflow: hidden;
+	position: fixed;
+	
+	$gradient0: #333333;
+	$gradient1: #000000;
+
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#6d6d6d+0,000000+100 */
+	background: $gradient0; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  $gradient0 0%, $gradient1 100%); /* FF3.6-15 */
+	background: -webkit-radial-gradient(center, ellipse cover,  $gradient0 0%,$gradient1 100%); /* Chrome10-25,Safari5.1-6 */
+	background: radial-gradient(ellipse at center,  $gradient0 0%,$gradient1 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+	background:#333;
+}
+
+html {
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+h1,h2,h3,h4,text,p,input,button {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-webkit-font-smoothing: antialiased;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	right: 10%;
+
+	display: block;
+
+	p {
+		font-size:100px;
+		color:white;
+		letter-spacing:25px;
+	}
+
+	#result {
+		width:100%;
+		font-size:100px;
+		color:black;
+		letter-spacing:25px;
+		text-align:right;
+		box-sizing: border-box;
+		padding-right: 100px;
+		transition: color .25s ease-out;
+	}
+
+	#result.success {
+		color:#00AA00
+	}
+
+	#result.failed {
+		color:#AA0000
+	}
+
+	.btnSubmit {
+		position: fixed;
+		right:134px;
+		margin-top:20px;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-webkit-font-smoothing: antialiased;
+		font-family: 'Open Sans', sans-serif;
+		font-size:25px;
+		padding:10px 20px 10px 20px;
+	}
+}
+
+.container-result {
+	margin-top:20px;
+}
+
+.field {
+	margin:5px;
+	margin-right:100px;
+	padding:10px;
+	text-align:right;
+}
+
+.score {
+	position: fixed;
+	bottom:0px;
+	width:100%;
+	left:50px;
+	color:white;
+	font-size:40px;
+}
