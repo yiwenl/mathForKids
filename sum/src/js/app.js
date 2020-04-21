@@ -16,6 +16,7 @@ function _init () {
 
   const btn = document.querySelector('.btnSubmit')
   const pResult = document.querySelector('#result')
+  const pResultCorrect = document.querySelector('#resultCorrect')
   const field1 = document.querySelector('.field1')
   const field2 = document.querySelector('.field2')
   const score = document.querySelector('.score')
@@ -30,6 +31,7 @@ function _init () {
     count++
     field1.innerHTML = randomFloor(1000, 5000)
     field2.innerHTML = randomFloor(1000, 5000)
+    pResultCorrect.value = ''
   }
 
   const updateScore = () => {
@@ -70,6 +72,8 @@ function _init () {
         countSuccess++
       } else {
         // console.log('Failed')
+        // pResult.value = `${(v0 + v1)} <span>${result}</span>`
+        pResultCorrect.value = `${v0 + v1}`
         pResult.classList.add('failed')
       }
     } else {
@@ -89,4 +93,9 @@ function _init () {
   }
 
   btn.addEventListener('click', submit)
+  window.addEventListener('keydown', (e) => {
+    if (e.keyCode === 13) {
+      submit()
+    }
+  })
 }

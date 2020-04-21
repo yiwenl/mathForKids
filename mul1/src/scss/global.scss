@@ -7,17 +7,8 @@ html, body {
 
 	overflow: hidden;
 	position: fixed;
-	
-	$gradient0: #333333;
-	$gradient1: #000000;
 
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#6d6d6d+0,000000+100 */
-	background: $gradient0; /* Old browsers */
-	background: -moz-radial-gradient(center, ellipse cover,  $gradient0 0%, $gradient1 100%); /* FF3.6-15 */
-	background: -webkit-radial-gradient(center, ellipse cover,  $gradient0 0%,$gradient1 100%); /* Chrome10-25,Safari5.1-6 */
-	background: radial-gradient(ellipse at center,  $gradient0 0%,$gradient1 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-
-	background:#333;
+	background:#222;
 }
 
 html {
@@ -30,6 +21,15 @@ h1,h2,h3,h4,text,p,input,button {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-webkit-font-smoothing: antialiased;
 	font-family: 'Open Sans', sans-serif;
+}
+
+input {
+	margin:0;
+	border:none;
+}
+
+textarea:focus, input:focus{
+	outline: none;
 }
 
 .container {
@@ -47,7 +47,7 @@ h1,h2,h3,h4,text,p,input,button {
 		letter-spacing:25px;
 	}
 
-	#result {
+	.resultInput {
 		width:100%;
 		font-size:100px;
 		color:black;
@@ -63,7 +63,8 @@ h1,h2,h3,h4,text,p,input,button {
 	}
 
 	#result.failed {
-		color:#AA0000
+		color:#AA0000;
+		text-decoration: line-through;
 	}
 
 	.btnSubmit {
@@ -80,6 +81,24 @@ h1,h2,h3,h4,text,p,input,button {
 
 .container-result {
 	margin-top:20px;
+}
+
+.inner-container {
+	float: left;
+	border: none;
+}
+
+.inner-container.left {
+	width:40%;
+
+	input {
+		padding-right: 0;
+		color:#00AA00
+	}
+}
+
+.inner-container.right {
+	width:60%;
 }
 
 .field {
